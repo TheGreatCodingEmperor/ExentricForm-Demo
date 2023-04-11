@@ -12,24 +12,61 @@
       <th>
         會議記錄代碼
       </th>
-      <td app-form-editable [(selectedField)]="selectedField" fieldName="name">
+      <td app-form-editable [(selectedField)]="selectedField" fieldName="recordCode">
         <div class="display">
-          {{datas.name}}
+          {{datas.recordCode}}
         </div>
         <div class="editable">
-          <input class="w-full" pInputText [(ngModel)]="datas.name" type="text" (blur)="unselect()">
+          <input class="w-full" pInputText [(ngModel)]="datas.recordCode" type="text" (blur)="unselect()">
         </div>
       </td>
 
       <th>
         會議編碼
       </th>
-      <td app-form-editable [(selectedField)]="selectedField" fieldName="email">
+      <td app-form-editable [(selectedField)]="selectedField" fieldName="code">
         <div class="display">
-          {{datas.email}}
+          {{datas.code}}
         </div>
         <div class="editable">
-          <input class="w-full" pInputText [(ngModel)]="datas.email" type="text" (blur)="unselect()">
+          <input class="w-full" pInputText [(ngModel)]="datas.code" type="text" (blur)="unselect()">
+        </div>
+      </td>
+      <th>
+          異動時間
+      </th>
+      <td app-form-editable [(selectedField)]="selectedField" fieldName="time">
+        <div class="display">
+          {{datas.time | date:'yyyy-MM-dd hh:mm:ss'}}
+        </div>
+        <div class="editable">
+          <input class="w-full" pInputText [(ngModel)]="datas.time" type="datetime-local" (blur)="unselect()">
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        狀態查詢
+      </th>
+      <td app-form-editable [(selectedField)]="selectedField" fieldName="queryStatus">
+        <div class="display">
+          {{datas.queryStatus}}
+        </div>
+        <div class="editable">
+          <input class="w-full" pInputText [(ngModel)]="datas.queryStatus" type="text" (blur)="unselect()">
+        </div>
+      </td>
+
+      <th>
+        召開狀態
+      </th>
+      <td app-form-editable [(selectedField)]="selectedField" fieldName="heldingStatus">
+        <div class="display">
+          {{datas.heldingStatus}}
+        </div>
+        <div class="editable">
+          <input class="w-full" pInputText [(ngModel)]="datas.heldingStatus" type="text" (blur)="unselect()">
         </div>
       </td>
       <th>
