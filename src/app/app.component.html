@@ -5,10 +5,12 @@
       <col>
       <col>
       <col>
+      <col>
+      <col>
     </colgroup>
     <tr>
       <th>
-        名稱 Jason Test
+        會議記錄代碼
       </th>
       <td app-form-editable [(selectedField)]="selectedField" fieldName="name">
         <div class="display">
@@ -20,7 +22,7 @@
       </td>
 
       <th>
-        Email
+        會議編碼
       </th>
       <td app-form-editable [(selectedField)]="selectedField" fieldName="email">
         <div class="display">
@@ -28,6 +30,17 @@
         </div>
         <div class="editable">
           <input class="w-full" pInputText [(ngModel)]="datas.email" type="text" (blur)="unselect()">
+        </div>
+      </td>
+      <th>
+          異動時間
+      </th>
+      <td app-form-editable [(selectedField)]="selectedField" fieldName="time">
+        <div class="display">
+          {{datas.time | date:'yyyy-MM-dd hh:mm:ss'}}
+        </div>
+        <div class="editable">
+          <input class="w-full" pInputText [(ngModel)]="datas.time" type="datetime-local" (blur)="unselect()">
         </div>
       </td>
     </tr>
