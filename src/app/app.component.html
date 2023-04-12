@@ -88,7 +88,7 @@
       </th>
       <td colspan="3" app-form-editable [(selectedField)]="selectedField" fieldName="address">
         <div class="display">
-          {{datas.address}}
+          {{datas.address}} 請輸入住址
         </div>
         <div class="editable">
           <input class="w-full" pInputText [(ngModel)]="datas.address" type="text" (blur)="unselect()">
